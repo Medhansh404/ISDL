@@ -1,6 +1,7 @@
 import React from "react";
 import "./profile.css";
 import Header from "./Header";
+import "./buslist.css";
 
 const Profile = () => {
     const imageStyle = {

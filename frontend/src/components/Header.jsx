@@ -20,12 +20,6 @@ const Header = () => {
       </div>
 
       <div className="logo">
-        <Link to="/buslist">
-          <button className="button">Bus list</button>
-        </Link>
-      </div>
-
-      <div className="logo">
         <Link to="/profile">
           <button className="button">Profile</button>
         </Link>

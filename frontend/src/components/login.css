@@ -7,13 +7,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.container-login{
+.container{
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #0171d3;
     justify-content: center;
+    background-color: #4070f4;
     column-gap: 30px;
 }
 .form{

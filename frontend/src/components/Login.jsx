@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState }from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
+import axios from 'axios';
+import{useNavigate} from "react-router-dom";
 
 const Login = () => {
+  const[email, setEmail] = useState()
+  const[password, setPassword] = useState()
+  const navigate = useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    //console.log(e)
+    axios.post('http://localhost:3001/login', {email, password}).then(result=>console.log(result)).catch(err => console.log(err))
+  }
   return (
-    <section className="container-login forms">
+    <section className="container forms">
       <div className="form login">
         <div className="form-content">
           <header>Login</header>
-          <form action="#">
+          <form action="#" onSubmit={handleSubmit}>
             <div className="media-options">
               <a href="#" className="field google">
                 <img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="" className="google-img" />
@@ -19,11 +30,12 @@ const Login = () => {
             <div className="line"></div>
 
             <div className="field input-field">
-              <input type="email" placeholder="Email" className="input" />
+              <input type="email" placeholder="Email" className="input" onChange={(e)=> setEmail(e.target.value)}/>
+
             </div>
 
             <div className="field input-field">
-              <input type="password" placeholder="Password" className="password" />
+              <input type="password" placeholder="Password" className="password" onChange={(e)=> setPassword(e.target.value)}/>
               <i className='bx bx-hide eye-icon'></i>
             </div>
 

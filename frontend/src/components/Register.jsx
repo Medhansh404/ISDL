@@ -13,7 +13,7 @@ const Register = () => {
             <div className="media-options">
               <a href="#" className="field google">
                 <img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="" className="google-img" />
-                <span>Login with Google</span>
+                <span>Signup with Google</span>
               </a>
             </div>
 

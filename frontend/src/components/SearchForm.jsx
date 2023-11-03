@@ -12,7 +12,7 @@ function SearchForm() {
             type="text"
             id="to"
             name="to"
-            placeholder="Destination"
+            placeholder="Destination City"
             required
           />
         </div>
